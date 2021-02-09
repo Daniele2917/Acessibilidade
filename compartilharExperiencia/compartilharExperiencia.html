@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartilhar | Acessibilidade</title>
+    <link rel="stylesheet" href="compartilharExperiencia.css">
+</head>
+<body>
+    <div>
+        <h1>Categoria</h1>
+
+        <input type="checkbox" id="academia" name="academia">
+        <label for="academia">Academia</label>
+        <input type="checkbox" id="escolas" name="escolas">
+        <label for="escolas">Escolas</label>
+        <input type="checkbox" id="mercado" name="mercado">
+        <label for="mercado">Mercado</label>
+        <input type="checkbox" id="praias" name="praias">
+        <label for="praias">Praias</label>
+        <input type="text" name="estabelecimento" placeholder="Nome do Lugar">
+        <input type="text" name="estabelecimento" placeholder="Nome do Lugar">
+
+        <input type="range" min="0" max="5" oninput="this.nextElementSibling.value = this.value">
+        <output></output>
+        <label>Detalhes da Experiência:</label>
+        <textarea  rows="5" cols="33"></textarea>
+        <button>Concluído</button>
+    </div>
+    <script src="compartilharExperiencia.js"></script>
+</body>
+</html>

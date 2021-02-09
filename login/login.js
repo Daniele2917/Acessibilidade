@@ -1,7 +1,7 @@
 function login() {
     const email = document.getElementsByName("email")[0].value;
     const senha = document.getElementsByName("senha")[0].value;
-    const allUsers = todosUsuarios();
+    const allUsers = JSON.parse(localStorage.getItem("users"));
 
     const existUser = allUsers.find(x => x.login === email && x.senha === senha);
 

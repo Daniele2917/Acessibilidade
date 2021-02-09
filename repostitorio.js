@@ -1,5 +1,6 @@
 function todosUsuarios() {
-    const users = [
+    
+    this.users = [
         {
             id: 1,
             login: "pedro.mendes",
@@ -34,32 +35,54 @@ function todosUsuarios() {
             idadePortador: "22"
         }
     ]
+    window.localStorage.setItem("users", JSON.stringify(users));
     return users;
 }
 
-function todosEstabelecimentos() {
+function todasExperiencias() {
 
-    const estabelecimentos = [
+    const experiencias = [
         {
             id: 1,
             nome: "Fisio Saude",
-            tipo: "clinica"
+            idUser: 3,
+            categoria: "clinica",
+            observacao: "Ambiente agradável com acessibilidade para minhas necessidades",
+            quantidadeEstrela: 5
+
         },
         {
             id: 2,
             nome: "Praia da barra",
-            tipo: "praias"
+            idUser: 1,
+            categoria: "praias",
+            observacao: "Atendeu minhas expectativas",
+            quantidadeEstrela: 4
         },
         {
             id: 3,
             nome: "Clinica Odontologica",
-            tipo: "clinica"
+            idUser: 3,
+            categoria: "clinica",
+            observacao: "Muito limpo e organizado",
+            quantidadeEstrela: 5
         },
         {
             id: 4,
             nome: "Mercado uniao",
-            tipo: "supermercado"
+            idUser: 2,
+            categoria: "supermercado",
+            observacao: "Grande variedade, porem muito bagunçado e apertado, pode melhorar",
+            quantidadeEstrela: 1
         }
     ]
-    return estabelecimentos
+    return experiencias;
+}
+
+function inserirUsuario(user) {
+    todosUsuarios();
+    var listUsers = JSON.parse(localStorage.getItem("users"));
+    user.id = listUsers[this.users.length -1].id + 1;
+    this.users.push(user);
+    window.localStorage.setItem("users", JSON.stringify(users));
 }
